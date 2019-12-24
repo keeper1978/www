@@ -1,0 +1,7 @@
+Docker с моим LAMP servers https://hub.docker.com/r/tutum/lamp
+
+создание своего имиджа 
+FROM tutum/lamp:latest
+RUN rm -fr /app && git clone https://github.com/keeper1978/www.git /app
+EXPOSE 80 3306
+CMD ["/run.sh"]
